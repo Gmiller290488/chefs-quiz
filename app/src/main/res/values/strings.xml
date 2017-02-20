@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Chefs quiz</string>
+    <string name="name">Name</string>
+    <string name="Q1">Question 1: Which of the following is a romanesco?"</string>
+    <string name="Q2">Question 2: What is this nut?</string>
+    <string name="Q3">Question 3: What does the word \'soigne\' mean?</string>
+    <string name="Q4">Question 4: A brunoise is a...?</string>
+    <string name="Q5">Question 5: Mayonnaise is...?</string>
+    <string name="Q2A1">Brazil</string>
+    <string name="Q2A2">Almond</string>
+    <string name="Q2A3">Pecan</string>
+    <string name="Q3A1">Amazing</string>
+    <string name="Q3A2">Perfect</string>
+    <string name="Q3A3">Unbelievable</string>
+    <string name="Q4A1">cake</string>
+    <string name="Q4A2">knife cut</string>
+    <string name="Q4A3">butter sauce</string>
+    <string name="Q5A1">an emulsification</string>
+    <string name="Q5A2">a mother sauce</string>
+    <string name="Q5A3">a dairy product</string>
+    <string name="Results">Results:</string>
+    <string name="score"></string>
+
 </resources>
