@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         Q1A2.setClickable(false);
         View Q1A3 = findViewById(R.id.Q1A3);
         Q1A3.setClickable(false);
-        showResults();
+
     }
 
     // First question - Wrong answer
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         Q1A2.setClickable(false);
         View Q1A3 = findViewById(R.id.Q1A3);
         Q1A3.setClickable(false);
-        showResults();
+
     }
 
     // First question - Wrong Answer
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         View Q1A3 = findViewById(R.id.Q1A3);
         Q1A3.setBackgroundColor(Color.RED);
         Q1A3.setClickable(false);
-        showResults();
+
     }
 
     // Second question - wrong answer
@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
         Q2A2.setClickable(false);
         View Q2A3 = findViewById(R.id.Q2A3);
         Q2A3.setClickable(false);
-        showResults();
     }
 
     //second question - correct answer
@@ -109,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         Q2A2.setClickable(false);
         View Q2A3 = findViewById(R.id.Q2A3);
         Q2A3.setClickable(false);
-        showResults();
+
     }
 
     // second question - wrong answer
@@ -125,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         View Q2A3 = findViewById(R.id.Q2A3);
         Q2A3.setBackgroundColor(Color.RED);
         Q2A3.setClickable(false);
-        showResults();
+
     }
 
     // third question - wrong answer
@@ -141,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         Q3A2.setClickable(false);
         View Q3A3 = findViewById(R.id.Q3A3);
         Q3A3.setClickable(false);
-        showResults();
+
     }
 
     // third question - correct answer
@@ -157,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
         Q3A2.setClickable(false);
         View Q3A3 = findViewById(R.id.Q3A3);
         Q3A3.setClickable(false);
-        showResults();
+
     }
 
     // third question - wrong answer
@@ -173,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
         View Q3A3 = findViewById(R.id.Q3A3);
         Q3A3.setBackgroundColor(Color.RED);
         Q3A3.setClickable(false);
-        showResults();
+
     }
 
     // Fourth question - wrong answer
@@ -189,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
         Q4A2.setClickable(false);
         View Q4A3 = findViewById(R.id.Q4A3);
         Q4A3.setClickable(false);
-        showResults();
+
 
     }
 
@@ -206,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
         Q4A2.setClickable(false);
         View Q4A3 = findViewById(R.id.Q4A3);
         Q4A3.setClickable(false);
-        showResults();
+
     }
 
 
@@ -223,26 +222,25 @@ public class MainActivity extends AppCompatActivity {
         View Q4A3 = findViewById(R.id.Q4A3);
         Q4A3.setBackgroundColor(Color.RED);
         Q4A3.setClickable(false);
-        showResults();
+
     }
 
     // Fifth question
     public void Q5Btn(View view) {
         guesses++;
         String correctAns = "noma";
-        View Q5A1 = findViewById(Q5A1);
         EditText ansField = (EditText) findViewById(Q5A1);
         String ans = ansField.getText().toString().toLowerCase();
-        Q5A1.setClickable(false);
+        ansField.setClickable(false);
         // if the answer is right...
         if (ans.equals(correctAns)) {
             score++;
-            Q5A1.setBackgroundColor(Color.GREEN);
+            ansField.setBackgroundColor(Color.GREEN);
             MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
             mp.start();
             // If the answer is wrong...
         } else {
-            Q5A1.setBackgroundColor(Color.RED);
+            ansField.setBackgroundColor(Color.RED);
             MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
             mp.start();
         }
@@ -256,6 +254,7 @@ public class MainActivity extends AppCompatActivity {
         Q6A1.setBackgroundColor(Color.GREEN);
         MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
         mp.start();
+        checkboxCheck();
     }
 
     // Sixth question - Right answer
@@ -266,16 +265,17 @@ public class MainActivity extends AppCompatActivity {
         Q6A2.setBackgroundColor(Color.GREEN);
         MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
         mp.start();
+        checkboxCheck();
     }
 
     // Sixth question - Wrong answer
     public void Q6A3(View view) {
         checkbox++;
-        score++;
         View Q6A3 = findViewById(R.id.Q6A3);
         Q6A3.setBackgroundColor(Color.RED);
         MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
         mp.start();
+        checkboxCheck();
     }
 
     // Sixth question - Right answer
@@ -286,17 +286,33 @@ public class MainActivity extends AppCompatActivity {
         Q6A4.setBackgroundColor(Color.GREEN);
         MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
         mp.start();
+        checkboxCheck();
     }
     // Sixth question - Wrong answer
     public void Q6A5(View view) {
         checkbox++;
-        score++;
         View Q6A5 = findViewById(R.id.Q6A5);
-        Q6A5.setBackgroundColor(Color.GREEN);
-        MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
+        Q6A5.setBackgroundColor(Color.RED);
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
         mp.start();
+        checkboxCheck();
     }
 
+    public void checkboxCheck() {
+        if (checkbox == 3) {
+            View Q6A1 = findViewById(R.id.Q6A1);
+            View Q6A2 = findViewById(R.id.Q6A2);
+            View Q6A3 = findViewById(R.id.Q6A3);
+            View Q6A4 = findViewById(R.id.Q6A4);
+            View Q6A5 = findViewById(R.id.Q6A5);
+            Q6A1.setClickable(false);
+            Q6A2.setClickable(false);
+            Q6A3.setClickable(false);
+            Q6A4.setClickable(false);
+            Q6A5.setClickable(false);
+
+        }
+    }
 
 
     // Seventh question - right answer
@@ -312,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
         Q7A2.setClickable(false);
         View Q7A3 = findViewById(R.id.Q7A3);
         Q7A3.setClickable(false);
-        showResults();
+
 
     }
 
@@ -329,7 +345,7 @@ public class MainActivity extends AppCompatActivity {
         Q7A2.setClickable(false);
         View Q7A3 = findViewById(R.id.Q7A3);
         Q7A3.setClickable(false);
-        showResults();
+
     }
 
     // Seventh question - Wrong Answer
@@ -345,19 +361,20 @@ public class MainActivity extends AppCompatActivity {
         View Q7A3 = findViewById(R.id.Q7A3);
         Q7A3.setBackgroundColor(Color.RED);
         Q7A3.setClickable(false);
-        showResults();
     }
 
     /*
    *    This function runs only after every question is answered.
    *    It shows the score, and then resets the questions.
      */
-    public void showResults() {
+    public void showResults(View view) {
         String endText = "";
         String message = (score + "/" + guesses);
         EditText nameField = (EditText) findViewById(R.id.name_field);
         String name = nameField.getText().toString();
-        if (guesses == 5) {
+        if (name.equals("")) {
+            name = "buddy";
+        }
             if (score == 5) {
                 endText = "Smashed it!";
             } else if (score == 4) {
@@ -390,4 +407,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-}
+
