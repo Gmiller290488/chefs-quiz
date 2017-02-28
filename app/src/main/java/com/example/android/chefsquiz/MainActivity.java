@@ -3,6 +3,7 @@ package com.example.android.chefsquiz;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -413,7 +414,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             endText = "Hang your head in shame!";
         }
-        // Toast.makeText(this, ("Thanks for playing, " + name + "\n" + message + "\n" + endText), Toast.LENGTH_LONG).show();
         LayoutInflater inflater = getLayoutInflater();
         View layout = inflater.inflate(R.layout.custom_toast,
                 (ViewGroup) findViewById(R.id.custom_toast_container));
@@ -421,14 +421,20 @@ public class MainActivity extends AppCompatActivity {
         TextView text = (TextView) layout.findViewById(R.id.text);
         text.setText("Thanks for playing, " + name + "\n" + message + "\n" + endText);
 
-        Toast toast = new Toast(getApplicationContext());
+        final Toast toast = new Toast(getApplicationContext());
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
-        for (int i=0; i < 2; i++) {
-            toast.show();
-        }
-        finish();
+        toast.show();
+
+        new CountDownTimer(9000, 1000)
+        {
+
+            public void onTick(long millisUntilFinished) {toast.show();}
+            public void onFinish() {toast.show();}
+
+        }.start();
+
         startActivity(getIntent());
     }
 }
