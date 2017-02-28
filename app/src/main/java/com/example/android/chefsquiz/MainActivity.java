@@ -12,9 +12,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static com.example.android.chefsquiz.R.id.Q5A1;
+
 public class MainActivity extends AppCompatActivity {
     int score = 0;
     int guesses = 0;
+    int checkbox = 0;
     boolean Q1Ans1 = true;
     boolean Q1Ans2 = false;
     boolean Q1Ans3 = false;
@@ -227,8 +230,8 @@ public class MainActivity extends AppCompatActivity {
     public void Q5Btn(View view) {
         guesses++;
         String correctAns = "noma";
-        View Q5A1 = findViewById(R.id.Q5A1);
-        EditText ansField = (EditText) findViewById(R.id.Q5A1);
+        View Q5A1 = findViewById(Q5A1);
+        EditText ansField = (EditText) findViewById(Q5A1);
         String ans = ansField.getText().toString().toLowerCase();
         Q5A1.setClickable(false);
         // if the answer is right...
@@ -237,14 +240,64 @@ public class MainActivity extends AppCompatActivity {
             Q5A1.setBackgroundColor(Color.GREEN);
             MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
             mp.start();
+            // If the answer is wrong...
         } else {
             Q5A1.setBackgroundColor(Color.RED);
             MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
             mp.start();
         }
-
-
     }
+
+    // Sixth question - Right answer
+    public void Q6A1(View view) {
+        checkbox++;
+        score++;
+        View Q6A1 = findViewById(R.id.Q6A1);
+        Q6A1.setBackgroundColor(Color.GREEN);
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
+        mp.start();
+    }
+
+    // Sixth question - Right answer
+    public void Q6A2(View view) {
+        checkbox++;
+        score++;
+        View Q6A2 = findViewById(R.id.Q6A2);
+        Q6A2.setBackgroundColor(Color.GREEN);
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
+        mp.start();
+    }
+
+    // Sixth question - Wrong answer
+    public void Q6A3(View view) {
+        checkbox++;
+        score++;
+        View Q6A3 = findViewById(R.id.Q6A3);
+        Q6A3.setBackgroundColor(Color.RED);
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
+        mp.start();
+    }
+
+    // Sixth question - Right answer
+    public void Q6A4(View view) {
+        checkbox++;
+        score++;
+        View Q6A4 = findViewById(R.id.Q6A4);
+        Q6A4.setBackgroundColor(Color.GREEN);
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
+        mp.start();
+    }
+    // Sixth question - Wrong answer
+    public void Q6A5(View view) {
+        checkbox++;
+        score++;
+        View Q6A5 = findViewById(R.id.Q6A5);
+        Q6A5.setBackgroundColor(Color.GREEN);
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
+        mp.start();
+    }
+
+
 
     // Seventh question - right answer
     public void Q7A1(View view) {
