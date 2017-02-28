@@ -8,16 +8,19 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import static com.example.android.chefsquiz.R.id.Q5A1;
+import static com.example.android.chefsquiz.R.id.submitBtn;
 
 public class MainActivity extends AppCompatActivity {
     int score = 0;
     int guesses = 0;
     int checkbox = 0;
+    int checkboxscore = 0;
     boolean Q1Ans1 = true;
     boolean Q1Ans2 = false;
     boolean Q1Ans3 = false;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
 
@@ -44,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         Q1A2.setClickable(false);
         View Q1A3 = findViewById(R.id.Q1A3);
         Q1A3.setClickable(false);
+        guessesChecker();
 
     }
 
@@ -60,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         Q1A2.setClickable(false);
         View Q1A3 = findViewById(R.id.Q1A3);
         Q1A3.setClickable(false);
+        guessesChecker();
 
     }
 
@@ -76,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         View Q1A3 = findViewById(R.id.Q1A3);
         Q1A3.setBackgroundColor(Color.RED);
         Q1A3.setClickable(false);
+        guessesChecker();
 
     }
 
@@ -92,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         Q2A2.setClickable(false);
         View Q2A3 = findViewById(R.id.Q2A3);
         Q2A3.setClickable(false);
+        guessesChecker();
     }
 
     //second question - correct answer
@@ -108,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         Q2A2.setClickable(false);
         View Q2A3 = findViewById(R.id.Q2A3);
         Q2A3.setClickable(false);
-
+        guessesChecker();
     }
 
     // second question - wrong answer
@@ -124,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         View Q2A3 = findViewById(R.id.Q2A3);
         Q2A3.setBackgroundColor(Color.RED);
         Q2A3.setClickable(false);
-
+        guessesChecker();
     }
 
     // third question - wrong answer
@@ -140,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         Q3A2.setClickable(false);
         View Q3A3 = findViewById(R.id.Q3A3);
         Q3A3.setClickable(false);
-
+        guessesChecker();
     }
 
     // third question - correct answer
@@ -156,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
         Q3A2.setClickable(false);
         View Q3A3 = findViewById(R.id.Q3A3);
         Q3A3.setClickable(false);
-
+        guessesChecker();
     }
 
     // third question - wrong answer
@@ -172,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
         View Q3A3 = findViewById(R.id.Q3A3);
         Q3A3.setBackgroundColor(Color.RED);
         Q3A3.setClickable(false);
-
+        guessesChecker();
     }
 
     // Fourth question - wrong answer
@@ -188,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
         Q4A2.setClickable(false);
         View Q4A3 = findViewById(R.id.Q4A3);
         Q4A3.setClickable(false);
-
+        guessesChecker();
 
     }
 
@@ -205,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
         Q4A2.setClickable(false);
         View Q4A3 = findViewById(R.id.Q4A3);
         Q4A3.setClickable(false);
-
+        guessesChecker();
     }
 
 
@@ -222,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
         View Q4A3 = findViewById(R.id.Q4A3);
         Q4A3.setBackgroundColor(Color.RED);
         Q4A3.setClickable(false);
-
+        guessesChecker();
     }
 
     // Fifth question
@@ -244,12 +252,13 @@ public class MainActivity extends AppCompatActivity {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
             mp.start();
         }
+        guessesChecker();
     }
 
     // Sixth question - Right answer
     public void Q6A1(View view) {
         checkbox++;
-        score++;
+        checkboxscore++;
         View Q6A1 = findViewById(R.id.Q6A1);
         Q6A1.setBackgroundColor(Color.GREEN);
         MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
@@ -260,7 +269,7 @@ public class MainActivity extends AppCompatActivity {
     // Sixth question - Right answer
     public void Q6A2(View view) {
         checkbox++;
-        score++;
+        checkboxscore++;
         View Q6A2 = findViewById(R.id.Q6A2);
         Q6A2.setBackgroundColor(Color.GREEN);
         MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
@@ -281,7 +290,7 @@ public class MainActivity extends AppCompatActivity {
     // Sixth question - Right answer
     public void Q6A4(View view) {
         checkbox++;
-        score++;
+        checkboxscore++;
         View Q6A4 = findViewById(R.id.Q6A4);
         Q6A4.setBackgroundColor(Color.GREEN);
         MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
@@ -310,7 +319,11 @@ public class MainActivity extends AppCompatActivity {
             Q6A3.setClickable(false);
             Q6A4.setClickable(false);
             Q6A5.setClickable(false);
-
+            if (checkboxscore == 3) {
+                score++;
+            }
+            guesses++;
+            guessesChecker();
         }
     }
 
@@ -328,7 +341,7 @@ public class MainActivity extends AppCompatActivity {
         Q7A2.setClickable(false);
         View Q7A3 = findViewById(R.id.Q7A3);
         Q7A3.setClickable(false);
-
+        guessesChecker();
 
     }
 
@@ -345,7 +358,7 @@ public class MainActivity extends AppCompatActivity {
         Q7A2.setClickable(false);
         View Q7A3 = findViewById(R.id.Q7A3);
         Q7A3.setClickable(false);
-
+        guessesChecker();
     }
 
     // Seventh question - Wrong Answer
@@ -361,6 +374,14 @@ public class MainActivity extends AppCompatActivity {
         View Q7A3 = findViewById(R.id.Q7A3);
         Q7A3.setBackgroundColor(Color.RED);
         Q7A3.setClickable(false);
+        guessesChecker();
+    }
+
+    public void guessesChecker() {
+        if (guesses == 7) {
+            Button submit = (Button) findViewById(submitBtn);
+            submit.setVisibility(View.VISIBLE);
+        }
     }
 
     /*
@@ -375,13 +396,16 @@ public class MainActivity extends AppCompatActivity {
         if (name.equals("")) {
             name = "buddy";
         }
-            if (score == 5) {
+            if (score == 7) {
                 endText = "Smashed it!";
-            } else if (score == 4) {
+            } else if (score == 6) {
                 endText = "Solid effort!  Just one shy of perfect!";
-            } else if (score == 3) {
+            } else if (score == 5) {
                 endText = "Not a bad attempt!";
-            } else if (score == 2) {
+            } else if (score == 4) {
+                endText = "50% Not good enough!";
+
+            } else if ((score == 2) || (score == 3)) {
                 endText = "Poor show! Better luck next time";
             } else if (score == 1) {
                 endText = "Maybe cooking isn't for you...";
