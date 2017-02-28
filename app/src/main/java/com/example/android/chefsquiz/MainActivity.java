@@ -425,7 +425,9 @@ public class MainActivity extends AppCompatActivity {
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
-        toast.show();
+        for (int i=0; i < 2; i++) {
+            toast.show();
+        }
         finish();
         startActivity(getIntent());
     }
