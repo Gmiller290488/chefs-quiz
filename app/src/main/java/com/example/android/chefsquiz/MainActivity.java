@@ -223,36 +223,36 @@ public class MainActivity extends AppCompatActivity {
         showResults();
     }
 
-    // Fifth question - right answer
+    // Seventh question - right answer
     public void Q5A1(View view) {
         score++;
         guesses++;
         MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
         mp.start();
-        View Q5A1 = findViewById(R.id.Q5A1);
-        Q5A1.setBackgroundColor(Color.GREEN);
-        Q5A1.setClickable(false);
-        View Q5A2 = findViewById(R.id.Q5A2);
-        Q5A2.setClickable(false);
-        View Q5A3 = findViewById(R.id.Q5A3);
-        Q5A3.setClickable(false);
+        View Q7A1 = findViewById(R.id.Q7A1);
+        Q7A1.setBackgroundColor(Color.GREEN);
+        Q7A1.setClickable(false);
+        View Q7A2 = findViewById(R.id.Q7A2);
+        Q7A2.setClickable(false);
+        View Q7A3 = findViewById(R.id.Q7A3);
+        Q7A3.setClickable(false);
         showResults();
 
     }
 
     // Fifth question - Wrong answer
-    public void Q5A2(View view) {
+    public void Q7A2(View view) {
         guesses++;
         MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
         mp.start();
-        View Q5A1 = findViewById(R.id.Q5A1);
-        Q5A1.setBackgroundColor(Color.GREEN);
-        Q5A1.setClickable(false);
-        View Q5A2 = findViewById(R.id.Q5A2);
-        Q5A2.setBackgroundColor(Color.RED);
-        Q5A2.setClickable(false);
-        View Q5A3 = findViewById(R.id.Q5A3);
-        Q5A3.setClickable(false);
+        View Q7A1 = findViewById(R.id.Q7A1);
+        Q7A1.setBackgroundColor(Color.GREEN);
+        Q7A1.setClickable(false);
+        View Q7A2 = findViewById(R.id.Q7A2);
+        Q7A2.setBackgroundColor(Color.RED);
+        Q7A2.setClickable(false);
+        View Q7A3 = findViewById(R.id.Q7A3);
+        Q7A3.setClickable(false);
         showResults();
     }
 
@@ -261,14 +261,14 @@ public class MainActivity extends AppCompatActivity {
         guesses++;
         MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
         mp.start();
-        View Q5A1 = findViewById(R.id.Q5A1);
-        Q5A1.setBackgroundColor(Color.GREEN);
-        Q5A1.setClickable(false);
-        View Q5A2 = findViewById(R.id.Q5A2);
-        Q5A2.setClickable(false);
-        View Q5A3 = findViewById(R.id.Q5A3);
-        Q5A3.setBackgroundColor(Color.RED);
-        Q5A3.setClickable(false);
+        View Q7A1 = findViewById(R.id.Q7A1);
+        Q7A1.setBackgroundColor(Color.GREEN);
+        Q7A1.setClickable(false);
+        View Q7A2 = findViewById(R.id.Q7A2);
+        Q7A2.setClickable(false);
+        View Q7A3 = findViewById(R.id.Q7A3);
+        Q7A3.setBackgroundColor(Color.RED);
+        Q7A3.setClickable(false);
         showResults();
     }
 

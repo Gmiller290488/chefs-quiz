@@ -297,6 +297,121 @@
                         android:layout_height="1dp"
                         android:background="@android:color/black" />
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="24dp">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="12dp"
+                            android:paddingTop="16dp"
+                            android:text="@string/Q5"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:id="@+id/Q5A1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Answer here"/>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Check"
+                            android:id="@+id/Q5Btn"
+                            android:onClick="Q5Btn"
+                            android:layout_gravity="center"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="24dp">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:paddingTop="16dp"
+                android:text="@string/Q6"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/Q6A1"
+                    android:onClick="Q6A1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:text="@string/Q6A1"
+                    android:padding="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/Q6A2"
+                    android:onClick="Q6A2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:text="@string/Q6A2"
+                    android:padding="8dp"
+                    />
+
+                <CheckBox
+                    android:id="@+id/Q6A3"
+                    android:onClick="Q6A3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:text="@string/Q6A3"
+                    android:padding="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/Q6A4"
+                    android:onClick="Q6A4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:text="@string/Q6A4"
+                    android:padding="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/Q6A5"
+                    android:onClick="Q6A5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:text="@string/Q6A5"
+                    android:padding="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/black" />
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -319,8 +434,8 @@
                             android:orientation="vertical">
 
                             <Button
-                                android:id="@+id/Q5A1"
-                                android:onClick="Q5A1"
+                                android:id="@+id/Q7A1"
+                                android:onClick="Q7A1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -329,8 +444,8 @@
                                 android:padding="8dp"/>
 
                             <Button
-                                android:id="@+id/Q5A2"
-                                android:onClick="Q5A2"
+                                android:id="@+id/Q7A2"
+                                android:onClick="Q7A2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -340,8 +455,8 @@
                                 />
 
                             <Button
-                                android:id="@+id/Q5A3"
-                                android:onClick="Q5A3"
+                                android:id="@+id/Q7A3"
+                                android:onClick="Q7A3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
