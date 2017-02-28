@@ -223,8 +223,31 @@ public class MainActivity extends AppCompatActivity {
         showResults();
     }
 
+    // Fifth question
+    public void Q5Btn(View view) {
+        guesses++;
+        String correctAns = "noma";
+        View Q5A1 = findViewById(R.id.Q5A1);
+        EditText ansField = (EditText) findViewById(R.id.Q5A1);
+        String ans = ansField.getText().toString().toLowerCase();
+        Q5A1.setClickable(false);
+        // if the answer is right...
+        if (ans.equals(correctAns)) {
+            score++;
+            Q5A1.setBackgroundColor(Color.GREEN);
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
+            mp.start();
+        } else {
+            Q5A1.setBackgroundColor(Color.RED);
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
+            mp.start();
+        }
+
+
+    }
+
     // Seventh question - right answer
-    public void Q5A1(View view) {
+    public void Q7A1(View view) {
         score++;
         guesses++;
         MediaPlayer mp = MediaPlayer.create(this, R.raw.right);
@@ -240,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // Fifth question - Wrong answer
+    // Seventh question - Wrong answer
     public void Q7A2(View view) {
         guesses++;
         MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
@@ -256,8 +279,8 @@ public class MainActivity extends AppCompatActivity {
         showResults();
     }
 
-    // Fifth question - Wrong Answer
-    public void Q5A3(View view) {
+    // Seventh question - Wrong Answer
+    public void Q7A3(View view) {
         guesses++;
         MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
         mp.start();
