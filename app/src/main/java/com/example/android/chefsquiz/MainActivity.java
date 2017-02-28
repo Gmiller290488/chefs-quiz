@@ -297,6 +297,7 @@ public class MainActivity extends AppCompatActivity {
         mp.start();
         checkboxCheck();
     }
+
     // Sixth question - Wrong answer
     public void Q6A5(View view) {
         checkbox++;
@@ -396,39 +397,39 @@ public class MainActivity extends AppCompatActivity {
         if (name.equals("")) {
             name = "buddy";
         }
-            if (score == 7) {
-                endText = "Smashed it!";
-            } else if (score == 6) {
-                endText = "Solid effort!  Just one shy of perfect!";
-            } else if (score == 5) {
-                endText = "Not a bad attempt!";
-            } else if (score == 4) {
-                endText = "50% Not good enough!";
+        if (score == 7) {
+            endText = "Smashed it!";
+        } else if (score == 6) {
+            endText = "Solid effort!  Just one shy of perfect!";
+        } else if (score == 5) {
+            endText = "Not a bad attempt!";
+        } else if (score == 4) {
+            endText = "50% Not good enough!";
 
-            } else if ((score == 2) || (score == 3)) {
-                endText = "Poor show! Better luck next time";
-            } else if (score == 1) {
-                endText = "Maybe cooking isn't for you...";
-            } else {
-                endText = "Hang your head in shame!";
-            }
-            // Toast.makeText(this, ("Thanks for playing, " + name + "\n" + message + "\n" + endText), Toast.LENGTH_LONG).show();
-            LayoutInflater inflater = getLayoutInflater();
-            View layout = inflater.inflate(R.layout.custom_toast,
-                    (ViewGroup) findViewById(R.id.custom_toast_container));
-
-            TextView text = (TextView) layout.findViewById(R.id.text);
-            text.setText("Thanks for playing, " + name + "\n" + message + "\n" + endText);
-
-            Toast toast = new Toast(getApplicationContext());
-            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-            toast.setDuration(Toast.LENGTH_LONG);
-            toast.setView(layout);
-            toast.show();
-            finish();
-            startActivity(getIntent());
+        } else if ((score == 2) || (score == 3)) {
+            endText = "Poor show! Better luck next time";
+        } else if (score == 1) {
+            endText = "Maybe cooking isn't for you...";
+        } else {
+            endText = "Hang your head in shame!";
         }
+        // Toast.makeText(this, ("Thanks for playing, " + name + "\n" + message + "\n" + endText), Toast.LENGTH_LONG).show();
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.custom_toast,
+                (ViewGroup) findViewById(R.id.custom_toast_container));
+
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText("Thanks for playing, " + name + "\n" + message + "\n" + endText);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
+        toast.show();
+        finish();
+        startActivity(getIntent());
     }
+}
 
 
 
