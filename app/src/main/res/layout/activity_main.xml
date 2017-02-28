@@ -319,7 +319,7 @@
                             android:hint="Answer here"/>
 
                         <Button
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Check"
                             android:id="@+id/Q5Btn"
@@ -425,7 +425,7 @@
                             android:layout_height="wrap_content"
                             android:padding="12dp"
                             android:paddingTop="16dp"
-                            android:text="@string/Q5"
+                            android:text="@string/Q7"
                             android:textSize="24sp" />
 
                         <LinearLayout
@@ -440,7 +440,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:textAllCaps="true"
-                                android:text="@string/Q5A1"
+                                android:text="@string/Q7A1"
                                 android:padding="8dp"/>
 
                             <Button
@@ -450,7 +450,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:textAllCaps="true"
-                                android:text="@string/Q5A2"
+                                android:text="@string/Q7A2"
                                 android:padding="8dp"
                                 />
 
@@ -462,7 +462,7 @@
                                 android:layout_weight="1"
                                 android:textAllCaps="true"
                                 android:padding="8dp"
-                                android:text="@string/Q5A3"/>
+                                android:text="@string/Q7A3"/>
                         </LinearLayout>
                     </LinearLayout>
 
