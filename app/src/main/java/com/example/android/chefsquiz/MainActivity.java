@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import static com.example.android.chefsquiz.R.id.Q5A1;
 import static com.example.android.chefsquiz.R.id.Q5Btn;
-import static com.example.android.chefsquiz.R.id.submitBtn;
 
 public class MainActivity extends AppCompatActivity {
     int score = 0;
@@ -50,7 +49,19 @@ public class MainActivity extends AppCompatActivity {
         Q1A2.setClickable(false);
         View Q1A3 = findViewById(R.id.Q1A3);
         Q1A3.setClickable(false);
-        guessesChecker();
+//        new CountDownTimer(1000,2000)
+//        {
+//            public void onTick(long millisUntilFinished)
+//            {}
+//            public void onFinish() {View Q1show = findViewById(R.id.Question1View);
+//                Q1show.setVisibility(View.INVISIBLE);
+//                View Q2show = findViewById(R.id.Question2View);
+//                Q2show.setVisibility(View.VISIBLE);}
+//        }.start();
+        View Q1show = findViewById(R.id.Question1View);
+        Q1show.setVisibility(View.INVISIBLE);
+        View Q2show = findViewById(R.id.Question2View);
+        Q2show.setVisibility(View.VISIBLE);
 
     }
 
@@ -67,8 +78,11 @@ public class MainActivity extends AppCompatActivity {
         Q1A2.setClickable(false);
         View Q1A3 = findViewById(R.id.Q1A3);
         Q1A3.setClickable(false);
-        guessesChecker();
 
+        View Q1show = findViewById(R.id.Question1View);
+        Q1show.setVisibility(View.INVISIBLE);
+        View Q2show = findViewById(R.id.Question2View);
+        Q2show.setVisibility(View.VISIBLE);
     }
 
     // First question - Wrong Answer
@@ -84,8 +98,11 @@ public class MainActivity extends AppCompatActivity {
         View Q1A3 = findViewById(R.id.Q1A3);
         Q1A3.setBackgroundColor(Color.RED);
         Q1A3.setClickable(false);
-        guessesChecker();
 
+        View Q1show = findViewById(R.id.Question1View);
+        Q1show.setVisibility(View.INVISIBLE);
+        View Q2show = findViewById(R.id.Question2View);
+        Q2show.setVisibility(View.VISIBLE);
     }
 
     // Second question - wrong answer
@@ -101,7 +118,11 @@ public class MainActivity extends AppCompatActivity {
         Q2A2.setClickable(false);
         View Q2A3 = findViewById(R.id.Q2A3);
         Q2A3.setClickable(false);
-        guessesChecker();
+
+        View Q2show = findViewById(R.id.Question2View);
+        Q2show.setVisibility(View.INVISIBLE);
+        View Q3show = findViewById(R.id.Question3View);
+        Q3show.setVisibility(View.VISIBLE);
     }
 
     //second question - correct answer
@@ -118,7 +139,11 @@ public class MainActivity extends AppCompatActivity {
         Q2A2.setClickable(false);
         View Q2A3 = findViewById(R.id.Q2A3);
         Q2A3.setClickable(false);
-        guessesChecker();
+
+        View Q2show = findViewById(R.id.Question2View);
+        Q2show.setVisibility(View.INVISIBLE);
+        View Q3show = findViewById(R.id.Question3View);
+        Q3show.setVisibility(View.VISIBLE);
     }
 
     // second question - wrong answer
@@ -134,7 +159,11 @@ public class MainActivity extends AppCompatActivity {
         View Q2A3 = findViewById(R.id.Q2A3);
         Q2A3.setBackgroundColor(Color.RED);
         Q2A3.setClickable(false);
-        guessesChecker();
+
+        View Q2show = findViewById(R.id.Question2View);
+        Q2show.setVisibility(View.INVISIBLE);
+        View Q3show = findViewById(R.id.Question3View);
+        Q3show.setVisibility(View.VISIBLE);
     }
 
     // third question - wrong answer
@@ -150,7 +179,11 @@ public class MainActivity extends AppCompatActivity {
         Q3A2.setClickable(false);
         View Q3A3 = findViewById(R.id.Q3A3);
         Q3A3.setClickable(false);
-        guessesChecker();
+
+        View Q3show = findViewById(R.id.Question3View);
+        Q3show.setVisibility(View.INVISIBLE);
+        View Q4show = findViewById(R.id.Question4View);
+        Q4show.setVisibility(View.VISIBLE);
     }
 
     // third question - correct answer
@@ -166,7 +199,11 @@ public class MainActivity extends AppCompatActivity {
         Q3A2.setClickable(false);
         View Q3A3 = findViewById(R.id.Q3A3);
         Q3A3.setClickable(false);
-        guessesChecker();
+
+        View Q3show = findViewById(R.id.Question3View);
+        Q3show.setVisibility(View.INVISIBLE);
+        View Q4show = findViewById(R.id.Question4View);
+        Q4show.setVisibility(View.VISIBLE);
     }
 
     // third question - wrong answer
@@ -182,7 +219,11 @@ public class MainActivity extends AppCompatActivity {
         View Q3A3 = findViewById(R.id.Q3A3);
         Q3A3.setBackgroundColor(Color.RED);
         Q3A3.setClickable(false);
-        guessesChecker();
+
+        View Q3show = findViewById(R.id.Question3View);
+        Q3show.setVisibility(View.INVISIBLE);
+        View Q4show = findViewById(R.id.Question4View);
+        Q4show.setVisibility(View.VISIBLE);
     }
 
     // Fourth question - wrong answer
@@ -198,8 +239,11 @@ public class MainActivity extends AppCompatActivity {
         Q4A2.setClickable(false);
         View Q4A3 = findViewById(R.id.Q4A3);
         Q4A3.setClickable(false);
-        guessesChecker();
 
+        View Q4show = findViewById(R.id.Question4View);
+        Q4show.setVisibility(View.INVISIBLE);
+        View Q5show = findViewById(R.id.Question5View);
+        Q5show.setVisibility(View.VISIBLE);
     }
 
     // fourth question - corrct answer
@@ -215,7 +259,11 @@ public class MainActivity extends AppCompatActivity {
         Q4A2.setClickable(false);
         View Q4A3 = findViewById(R.id.Q4A3);
         Q4A3.setClickable(false);
-        guessesChecker();
+
+        View Q4show = findViewById(R.id.Question4View);
+        Q4show.setVisibility(View.INVISIBLE);
+        View Q5show = findViewById(R.id.Question5View);
+        Q5show.setVisibility(View.VISIBLE);
     }
 
 
@@ -232,7 +280,11 @@ public class MainActivity extends AppCompatActivity {
         View Q4A3 = findViewById(R.id.Q4A3);
         Q4A3.setBackgroundColor(Color.RED);
         Q4A3.setClickable(false);
-        guessesChecker();
+
+        View Q4show = findViewById(R.id.Question4View);
+        Q4show.setVisibility(View.INVISIBLE);
+        View Q5show = findViewById(R.id.Question5View);
+        Q5show.setVisibility(View.VISIBLE);
     }
 
     // Fifth question
@@ -257,7 +309,11 @@ public class MainActivity extends AppCompatActivity {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.wrong);
             mp.start();
         }
-        guessesChecker();
+
+        View Q5show = findViewById(R.id.Question5View);
+        Q5show.setVisibility(View.INVISIBLE);
+        View Q6show = findViewById(R.id.Question6View);
+        Q6show.setVisibility(View.VISIBLE);
     }
 
     // Sixth question - Right answer
@@ -325,11 +381,16 @@ public class MainActivity extends AppCompatActivity {
             Q6A3.setClickable(false);
             Q6A4.setClickable(false);
             Q6A5.setClickable(false);
+            View Q6show = findViewById(R.id.Question6View);
+            Q6show.setVisibility(View.INVISIBLE);
+            View Q7show = findViewById(R.id.Question7View);
+            Q7show.setVisibility(View.VISIBLE);
             if (checkboxscore == 3) {
                 score++;
+
             }
             guesses++;
-            guessesChecker();
+
         }
     }
 
@@ -347,7 +408,9 @@ public class MainActivity extends AppCompatActivity {
         Q7A2.setClickable(false);
         View Q7A3 = findViewById(R.id.Q7A3);
         Q7A3.setClickable(false);
-        guessesChecker();
+
+        View Q7show = findViewById(R.id.Question7View);
+        Q7show.setVisibility(View.INVISIBLE);
 
     }
 
@@ -364,7 +427,10 @@ public class MainActivity extends AppCompatActivity {
         Q7A2.setClickable(false);
         View Q7A3 = findViewById(R.id.Q7A3);
         Q7A3.setClickable(false);
-        guessesChecker();
+
+        View Q7show = findViewById(R.id.Question7View);
+        Q7show.setVisibility(View.INVISIBLE);
+
     }
 
     // Seventh question - Wrong Answer
@@ -380,15 +446,12 @@ public class MainActivity extends AppCompatActivity {
         View Q7A3 = findViewById(R.id.Q7A3);
         Q7A3.setBackgroundColor(Color.RED);
         Q7A3.setClickable(false);
-        guessesChecker();
+
+        View Q7show = findViewById(R.id.Question7View);
+        Q7show.setVisibility(View.INVISIBLE);
+
     }
 
-    public void guessesChecker() {
-        if (guesses == 7) {
-            Button submit = (Button) findViewById(submitBtn);
-            submit.setVisibility(View.VISIBLE);
-        }
-    }
 
     /*
    *    This function runs only after every question is answered.
@@ -431,7 +494,7 @@ public class MainActivity extends AppCompatActivity {
         toast.setView(layout);
         toast.show();
 
-        new CountDownTimer(9000, 1000)
+        new CountDownTimer(9000, 3000)
         {
 
             public void onTick(long millisUntilFinished) {toast.show();}
