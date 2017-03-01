@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static com.example.android.chefsquiz.R.id.Q5A1;
+import static com.example.android.chefsquiz.R.id.Q5Btn;
 import static com.example.android.chefsquiz.R.id.submitBtn;
 
 public class MainActivity extends AppCompatActivity {
@@ -239,8 +240,11 @@ public class MainActivity extends AppCompatActivity {
         guesses++;
         String correctAns = "noma";
         EditText ansField = (EditText) findViewById(Q5A1);
-        String ans = ansField.getText().toString().toLowerCase();
-        ansField.setClickable(false);
+        String answer = ansField.getText().toString().toLowerCase();
+        String ans = answer.replaceAll("[^A-Za-z]+","");
+        ansField.setText(ans);
+        View ansBtn = (Button) findViewById(Q5Btn);
+        ansBtn.setVisibility(View.INVISIBLE);
         // if the answer is right...
         if (ans.equals(correctAns)) {
             score++;
