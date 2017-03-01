@@ -22,9 +22,7 @@ public class MainActivity extends AppCompatActivity {
     int guesses = 0;
     int checkbox = 0;
     int checkboxscore = 0;
-    boolean Q1Ans1 = true;
-    boolean Q1Ans2 = false;
-    boolean Q1Ans3 = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     // First question - Correct answer
+
 
     public void Q1A1(View view) {
         score++;
@@ -49,19 +48,18 @@ public class MainActivity extends AppCompatActivity {
         Q1A2.setClickable(false);
         View Q1A3 = findViewById(R.id.Q1A3);
         Q1A3.setClickable(false);
-//        new CountDownTimer(1000,2000)
-//        {
-//            public void onTick(long millisUntilFinished)
-//            {}
-//            public void onFinish() {View Q1show = findViewById(R.id.Question1View);
-//                Q1show.setVisibility(View.INVISIBLE);
-//                View Q2show = findViewById(R.id.Question2View);
-//                Q2show.setVisibility(View.VISIBLE);}
-//        }.start();
-        View Q1show = findViewById(R.id.Question1View);
-        Q1show.setVisibility(View.INVISIBLE);
-        View Q2show = findViewById(R.id.Question2View);
-        Q2show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q1 = findViewById(R.id.Question1View);
+                Q1.setVisibility(View.INVISIBLE);
+                View Q2 = findViewById(R.id.Question2View);
+                Q2.setVisibility(View.VISIBLE);
+            }
+        }.start();
+
 
     }
 
@@ -78,11 +76,17 @@ public class MainActivity extends AppCompatActivity {
         Q1A2.setClickable(false);
         View Q1A3 = findViewById(R.id.Q1A3);
         Q1A3.setClickable(false);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
 
-        View Q1show = findViewById(R.id.Question1View);
-        Q1show.setVisibility(View.INVISIBLE);
-        View Q2show = findViewById(R.id.Question2View);
-        Q2show.setVisibility(View.VISIBLE);
+            public void onFinish() {
+                View Q1 = findViewById(R.id.Question1View);
+                Q1.setVisibility(View.INVISIBLE);
+                View Q2 = findViewById(R.id.Question2View);
+                Q2.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     // First question - Wrong Answer
@@ -99,10 +103,17 @@ public class MainActivity extends AppCompatActivity {
         Q1A3.setBackgroundColor(Color.RED);
         Q1A3.setClickable(false);
 
-        View Q1show = findViewById(R.id.Question1View);
-        Q1show.setVisibility(View.INVISIBLE);
-        View Q2show = findViewById(R.id.Question2View);
-        Q2show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q1 = findViewById(R.id.Question1View);
+                Q1.setVisibility(View.INVISIBLE);
+                View Q2 = findViewById(R.id.Question2View);
+                Q2.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     // Second question - wrong answer
@@ -119,10 +130,17 @@ public class MainActivity extends AppCompatActivity {
         View Q2A3 = findViewById(R.id.Q2A3);
         Q2A3.setClickable(false);
 
-        View Q2show = findViewById(R.id.Question2View);
-        Q2show.setVisibility(View.INVISIBLE);
-        View Q3show = findViewById(R.id.Question3View);
-        Q3show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q2 = findViewById(R.id.Question2View);
+                Q2.setVisibility(View.INVISIBLE);
+                View Q3 = findViewById(R.id.Question3View);
+                Q3.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     //second question - correct answer
@@ -140,10 +158,17 @@ public class MainActivity extends AppCompatActivity {
         View Q2A3 = findViewById(R.id.Q2A3);
         Q2A3.setClickable(false);
 
-        View Q2show = findViewById(R.id.Question2View);
-        Q2show.setVisibility(View.INVISIBLE);
-        View Q3show = findViewById(R.id.Question3View);
-        Q3show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q2 = findViewById(R.id.Question2View);
+                Q2.setVisibility(View.INVISIBLE);
+                View Q3 = findViewById(R.id.Question3View);
+                Q3.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     // second question - wrong answer
@@ -160,10 +185,17 @@ public class MainActivity extends AppCompatActivity {
         Q2A3.setBackgroundColor(Color.RED);
         Q2A3.setClickable(false);
 
-        View Q2show = findViewById(R.id.Question2View);
-        Q2show.setVisibility(View.INVISIBLE);
-        View Q3show = findViewById(R.id.Question3View);
-        Q3show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q2 = findViewById(R.id.Question2View);
+                Q2.setVisibility(View.INVISIBLE);
+                View Q3 = findViewById(R.id.Question3View);
+                Q3.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     // third question - wrong answer
@@ -180,10 +212,17 @@ public class MainActivity extends AppCompatActivity {
         View Q3A3 = findViewById(R.id.Q3A3);
         Q3A3.setClickable(false);
 
-        View Q3show = findViewById(R.id.Question3View);
-        Q3show.setVisibility(View.INVISIBLE);
-        View Q4show = findViewById(R.id.Question4View);
-        Q4show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q3 = findViewById(R.id.Question3View);
+                Q3.setVisibility(View.INVISIBLE);
+                View Q4 = findViewById(R.id.Question4View);
+                Q4.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     // third question - correct answer
@@ -200,10 +239,17 @@ public class MainActivity extends AppCompatActivity {
         View Q3A3 = findViewById(R.id.Q3A3);
         Q3A3.setClickable(false);
 
-        View Q3show = findViewById(R.id.Question3View);
-        Q3show.setVisibility(View.INVISIBLE);
-        View Q4show = findViewById(R.id.Question4View);
-        Q4show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q3 = findViewById(R.id.Question3View);
+                Q3.setVisibility(View.INVISIBLE);
+                View Q4 = findViewById(R.id.Question4View);
+                Q4.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     // third question - wrong answer
@@ -220,10 +266,17 @@ public class MainActivity extends AppCompatActivity {
         Q3A3.setBackgroundColor(Color.RED);
         Q3A3.setClickable(false);
 
-        View Q3show = findViewById(R.id.Question3View);
-        Q3show.setVisibility(View.INVISIBLE);
-        View Q4show = findViewById(R.id.Question4View);
-        Q4show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q3 = findViewById(R.id.Question3View);
+                Q3.setVisibility(View.INVISIBLE);
+                View Q4 = findViewById(R.id.Question4View);
+                Q4.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     // Fourth question - wrong answer
@@ -240,10 +293,17 @@ public class MainActivity extends AppCompatActivity {
         View Q4A3 = findViewById(R.id.Q4A3);
         Q4A3.setClickable(false);
 
-        View Q4show = findViewById(R.id.Question4View);
-        Q4show.setVisibility(View.INVISIBLE);
-        View Q5show = findViewById(R.id.Question5View);
-        Q5show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q4 = findViewById(R.id.Question4View);
+                Q4.setVisibility(View.INVISIBLE);
+                View Q5 = findViewById(R.id.Question5View);
+                Q5.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     // fourth question - corrct answer
@@ -260,10 +320,17 @@ public class MainActivity extends AppCompatActivity {
         View Q4A3 = findViewById(R.id.Q4A3);
         Q4A3.setClickable(false);
 
-        View Q4show = findViewById(R.id.Question4View);
-        Q4show.setVisibility(View.INVISIBLE);
-        View Q5show = findViewById(R.id.Question5View);
-        Q5show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q4 = findViewById(R.id.Question4View);
+                Q4.setVisibility(View.INVISIBLE);
+                View Q5 = findViewById(R.id.Question5View);
+                Q5.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
 
@@ -281,10 +348,17 @@ public class MainActivity extends AppCompatActivity {
         Q4A3.setBackgroundColor(Color.RED);
         Q4A3.setClickable(false);
 
-        View Q4show = findViewById(R.id.Question4View);
-        Q4show.setVisibility(View.INVISIBLE);
-        View Q5show = findViewById(R.id.Question5View);
-        Q5show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q4 = findViewById(R.id.Question4View);
+                Q4.setVisibility(View.INVISIBLE);
+                View Q5 = findViewById(R.id.Question5View);
+                Q5.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     // Fifth question
@@ -293,7 +367,7 @@ public class MainActivity extends AppCompatActivity {
         String correctAns = "noma";
         EditText ansField = (EditText) findViewById(Q5A1);
         String answer = ansField.getText().toString().toLowerCase();
-        String ans = answer.replaceAll("[^A-Za-z]+","");
+        String ans = answer.replaceAll("[^A-Za-z]+", "");
         ansField.setText(ans);
         View ansBtn = (Button) findViewById(Q5Btn);
         ansBtn.setVisibility(View.INVISIBLE);
@@ -310,10 +384,17 @@ public class MainActivity extends AppCompatActivity {
             mp.start();
         }
 
-        View Q5show = findViewById(R.id.Question5View);
-        Q5show.setVisibility(View.INVISIBLE);
-        View Q6show = findViewById(R.id.Question6View);
-        Q6show.setVisibility(View.VISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q5 = findViewById(R.id.Question5View);
+                Q5.setVisibility(View.INVISIBLE);
+                View Q6 = findViewById(R.id.Question6View);
+                Q6.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     // Sixth question - Right answer
@@ -381,10 +462,17 @@ public class MainActivity extends AppCompatActivity {
             Q6A3.setClickable(false);
             Q6A4.setClickable(false);
             Q6A5.setClickable(false);
-            View Q6show = findViewById(R.id.Question6View);
-            Q6show.setVisibility(View.INVISIBLE);
-            View Q7show = findViewById(R.id.Question7View);
-            Q7show.setVisibility(View.VISIBLE);
+            new CountDownTimer(1000, 2000) {
+                public void onTick(long millisUntilFinished) {
+                }
+
+                public void onFinish() {
+                    View Q6 = findViewById(R.id.Question6View);
+                    Q6.setVisibility(View.INVISIBLE);
+                    View Q7 = findViewById(R.id.Question7View);
+                    Q7.setVisibility(View.VISIBLE);
+                }
+            }.start();
             if (checkboxscore == 3) {
                 score++;
 
@@ -409,8 +497,17 @@ public class MainActivity extends AppCompatActivity {
         View Q7A3 = findViewById(R.id.Q7A3);
         Q7A3.setClickable(false);
 
-        View Q7show = findViewById(R.id.Question7View);
-        Q7show.setVisibility(View.INVISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q7 = findViewById(R.id.Question7View);
+                Q7.setVisibility(View.INVISIBLE);
+                View submit = findViewById(R.id.submitBtn);
+                submit.setVisibility(View.VISIBLE);
+            }
+        }.start();
 
     }
 
@@ -427,9 +524,17 @@ public class MainActivity extends AppCompatActivity {
         Q7A2.setClickable(false);
         View Q7A3 = findViewById(R.id.Q7A3);
         Q7A3.setClickable(false);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
 
-        View Q7show = findViewById(R.id.Question7View);
-        Q7show.setVisibility(View.INVISIBLE);
+            public void onFinish() {
+                View Q7 = findViewById(R.id.Question7View);
+                Q7.setVisibility(View.INVISIBLE);
+                View submit = findViewById(R.id.submitBtn);
+                submit.setVisibility(View.VISIBLE);
+            }
+        }.start();
 
     }
 
@@ -447,8 +552,17 @@ public class MainActivity extends AppCompatActivity {
         Q7A3.setBackgroundColor(Color.RED);
         Q7A3.setClickable(false);
 
-        View Q7show = findViewById(R.id.Question7View);
-        Q7show.setVisibility(View.INVISIBLE);
+        new CountDownTimer(1000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                View Q7 = findViewById(R.id.Question7View);
+                Q7.setVisibility(View.INVISIBLE);
+                View submit = findViewById(R.id.submitBtn);
+                submit.setVisibility(View.VISIBLE);
+            }
+        }.start();
 
     }
 
@@ -494,11 +608,15 @@ public class MainActivity extends AppCompatActivity {
         toast.setView(layout);
         toast.show();
 
-        new CountDownTimer(9000, 3000)
-        {
+        new CountDownTimer(9000, 3000) {
 
-            public void onTick(long millisUntilFinished) {toast.show();}
-            public void onFinish() {toast.show();}
+            public void onTick(long millisUntilFinished) {
+                toast.show();
+            }
+
+            public void onFinish() {
+                toast.show();
+            }
 
         }.start();
 
