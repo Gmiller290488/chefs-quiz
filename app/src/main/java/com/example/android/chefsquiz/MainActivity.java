@@ -586,7 +586,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (score == 5) {
             endText = "Not a bad attempt!";
         } else if (score == 4) {
-            endText = "50% Not good enough!";
+            endText = "Not good, bro!";
 
         } else if ((score == 2) || (score == 3)) {
             endText = "Poor show! Better luck next time";

@@ -32,7 +32,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/black" />
+                android:background="@android:color/black"
+                android:paddingTop="8dp"/>
         </LinearLayout>
 
         <RelativeLayout
@@ -121,7 +122,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="16dp"
-                    android:background="@android:color/black" />
+                    android:background="@android:color/black"
+                    android:paddingTop="8dp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -191,7 +193,8 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@android:color/black" />
+                    android:background="@android:color/black"
+                    android:paddingTop="8dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -248,7 +251,8 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@android:color/black" />
+                        android:background="@android:color/black"
+                        android:paddingTop="8dp"/>
                 </LinearLayout>
 
 
@@ -308,7 +312,8 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@android:color/black" />
+                        android:background="@android:color/black"
+                        android:paddingTop="8dp"/>
                 </LinearLayout>
 
 
@@ -354,7 +359,8 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@android:color/black" />
+                    android:background="@android:color/black"
+                    android:paddingTop="8dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -429,10 +435,12 @@
                             android:text="@string/Q6A5"
                             android:textAllCaps="true" />
                     </LinearLayout>
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@android:color/black" />
+                        android:background="@android:color/black"
+                        android:paddingTop="8dp"/>
                 </LinearLayout>
 
 
@@ -498,7 +506,8 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@android:color/black" />
+                            android:background="@android:color/black"
+                            android:paddingTop="8dp"/>
                 </LinearLayout>
                 </LinearLayout>
 
